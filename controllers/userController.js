@@ -47,6 +47,7 @@ function insertRecord(req, res){
     });
 }
 
+// Update Api
 function updateRecord(req, res){
     User.findOneAndUpdate({ _id: req.body._id}, req.body, {new: true}, (err, doc) => {
         if(!err){res.redirect('user/list');}
@@ -79,7 +80,7 @@ router.get('/list', (req, res) => {
     })
 })
 
-
+// Validation 
 function handleValidationError(err, body){
    for(field in err.errors)
    {
@@ -133,6 +134,7 @@ router.get('/:id', (req, res) => {
     })
 });
 
+// Delete
 router.get('/delete/:id', (req, res) => {
     User.findByIdAndRemove(req.params.id, (err, doc) => {
         if(!err){

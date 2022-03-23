@@ -77,8 +77,7 @@ style="color:rgb(196, 189, 189);"
         
         {{!-- Dob --}}
         <div class="form-group col-md-6">
-            <label for="dob">Date of Birth</label>        
-            {{!-- <input type="date" class="form-control" name="dob" placeholder="Date of Birth" value="{{user.dob}}" > --}}
+            <label for="dob">Date of Birth</label>
             <input type="text" class="form-control" name="dob" placeholder="dd-mm-yyyy" onfocus="(this.type='date') "  value="{{user.dob}}" >
             <div class="text-danger">
                 {{user.dobError}}
@@ -127,7 +126,7 @@ style="color:rgb(196, 189, 189);"
     </div>  
 
 
-    
+    {{!-- Submit Button and View all button --}}
     <div class="form-group my-5">
         <button type="submit" class="btn btn-info">
             <i class="fa fa-database"></i>
@@ -135,4 +134,5 @@ style="color:rgb(196, 189, 189);"
         </button>
         <a href="/user/list" class="btn btn-secondary  mx-3"><i class="fa fa-list-alt"></i> View All</a>
     </div>
+
 </form>

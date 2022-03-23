@@ -78,15 +78,8 @@ usersSchema.path('mobile').validate((val) => {
     return mobileRegex.test(val);
 }, 'Mobile No. should be of 10 digits');
 
-
-
 mongoose.model('User', usersSchema);
 
-
-
-
-// Fields to be  used:
-// name, email, age, gender, mobile, dob, city, state, country, address
 
 // Fields Used
 //    name, age,
